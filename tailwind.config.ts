@@ -18,6 +18,9 @@ const config: Config = {
       },
       colors: {
         epiffaniaGreen: '#113836'
+      },
+      dropShadow: {
+        epiff: '5px -2px 3px rgba(0, 0, 0, 0.478)'
       }
     }
   },

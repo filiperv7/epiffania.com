@@ -1,5 +1,7 @@
+import { ReactNode } from 'react'
+
 export interface BenefitProps {
-  children: any
+  children: ReactNode
   title: string
   description: string
 }

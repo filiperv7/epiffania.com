@@ -1,6 +1,7 @@
 import capa from '@/public/capa.jpg'
 import { Quando } from 'next/font/google'
 import Image from 'next/image'
+import { Area } from './common/Area'
 
 const quando = Quando({ subsets: ['latin'], weight: ['400'] })
 
@@ -13,16 +14,18 @@ export function Banner() {
           alt="Capa do site"
           className="w-[100%] h-[300px] object-cover"
         />
-        <div className="absolute bottom-0 p-4">
-          <h2 className={`gradient text-3xl leading-6 ${quando.className}`}>
+        <Area className="absolute bottom-0 py-4">
+          <h2
+            className={`gradient text-3xl leading-6 drop-shadow-epiff ${quando.className}`}
+          >
             13/08
           </h2>
           <h1
-            className={`gradient text-7xl max-[317px]:text-6xl max-[317px]:leading-relaxed leading-normal ${quando.className}`}
+            className={`gradient text-7xl max-[317px]:text-6xl max-[317px]:leading-relaxed leading-normal drop-shadow-epiff ${quando.className}`}
           >
             Inauguração
           </h1>
-        </div>
+        </Area>
       </div>
     </div>
   )
