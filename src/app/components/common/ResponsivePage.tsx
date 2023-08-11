@@ -3,7 +3,7 @@ interface PageProps {
   className?: string
 }
 
-export function Page({ children, className }: PageProps) {
+export function ResponsivePage({ children, className }: PageProps) {
   return (
     <div
       className={`flex flex-col min-h-screen

@@ -6,7 +6,7 @@ import { Benefit } from './Benefit'
 
 export function Benefits() {
   return (
-    <Area className="py-6">
+    <Area className="py-16">
       <div className="flex gap-6 flex-wrap items-center justify-center">
         <Benefit
           title="Preços de inauguração"

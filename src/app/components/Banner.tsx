@@ -12,17 +12,13 @@ export function Banner() {
         <Image
           src={capa}
           alt="Capa do site"
-          className="w-[100%] h-[300px] object-cover"
+          className="w-[100%] h-[400px] object-cover object-top object-[20%]"
         />
-        <Area className="absolute bottom-0 py-4">
-          <h2
-            className={`gradient text-3xl leading-6 drop-shadow-epiff ${quando.className}`}
-          >
+        <Area className={`absolute bottom-0 py-4 ${quando.className}`}>
+          <h2 className="gradient text-3xl leading-6 drop-shadow-epiff">
             13/08
           </h2>
-          <h1
-            className={`gradient text-7xl max-[317px]:text-6xl max-[317px]:leading-relaxed leading-normal drop-shadow-epiff ${quando.className}`}
-          >
+          <h1 className="gradient text-7xl max-[317px]:text-6xl max-[317px]:leading-relaxed leading-normal drop-shadow-epiff">
             Inauguração
           </h1>
         </Area>
