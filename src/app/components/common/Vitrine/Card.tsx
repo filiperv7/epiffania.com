@@ -1,9 +1,15 @@
+import Product from '@/logic/interfaces/Product'
+import formatCurrency from '@/logic/utils/formatCurrency'
 import bracelete from '@/public/bracelete.webp'
 import Link from 'next/link'
 import { ButtonAddCart } from '../ButtonAddCart'
 import ResponsiveImage from '../ResponsiveImage'
 
-export function Card() {
+interface CardProps extends Product {
+  addProduct: () => void
+}
+
+export function Card({ code, title, oldPrice, price, addProduct }: CardProps) {
   return (
     <Link
       href="/product"
@@ -11,21 +17,23 @@ export function Card() {
     >
       <ResponsiveImage src={bracelete} alt=" " />
       <div className="flex flex-col items-center">
-        <h3 className="text-xl font-bold text-center">
-          Pulseira Elo Suzzi 8MM Dourado Folheado
-        </h3>
+        <h3 className="text-xl font-bold text-center">{title}</h3>
 
         <div className="pt-4 pb-3">
           <p className="text-center text-xl text-zinc-500 line-through">
-            DE: R$ 59.99
+            DE: {formatCurrency(oldPrice)}
           </p>
           <p className="text-center text-xl font-extrabold text-epiffaniaGreen">
-            POR: R$ 47,72
+            POR: {formatCurrency(price)}
           </p>
         </div>
         <p className="text-center pb-4">3x de 15,90</p>
 
-        <ButtonAddCart className="max-w-[15rem] rounded-3xl" />
+        <ButtonAddCart
+          onClick={addProduct}
+          className="max-w-[15rem] rounded-3xl"
+          text="Adicionar ao Carrinho"
+        />
       </div>
     </Link>
   )

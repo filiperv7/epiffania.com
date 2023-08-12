@@ -21,6 +21,9 @@ const config: Config = {
       },
       dropShadow: {
         epiff: '5px -2px 3px rgba(0, 0, 0, 0.478)'
+      },
+      boxShadow: {
+        epiff: '3px 3px 8px rgba(0, 0, 0, 0.2)'
       }
     }
   },
