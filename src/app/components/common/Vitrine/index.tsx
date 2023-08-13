@@ -7,7 +7,7 @@ import { Card } from './Card'
 
 const GET_JEWELRY_QUERY = gql`
   query {
-    jewelry(first: ${process.env.NEXT_PUBLIC_QUANT_RETURN}) {
+    jewelry(first: 50) {
       code
       description
       id
@@ -32,18 +32,12 @@ export function Vitrine({
   title: string
   className?: string
 }) {
-  // const products = useEffect(() => {
-  //   client.query({ query: GET_JEWEL_QUERY }).then(response => {
-  //     return response
-  //   })
-  // }, [])
-
   const { data } = useQuery<GetJewelryQueryResponse>(GET_JEWELRY_QUERY)
 
   if (!data) {
     return (
-      <div className="flex-1">
-        <p>CARREGANDO......</p>
+      <div className="flex-1 h-full flex items-center justify-center">
+        <p className="text-center text-4xl font-bold gradient">CARREGANDO...</p>
       </div>
     )
   }
