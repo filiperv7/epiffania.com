@@ -7,7 +7,7 @@ import { Card } from './Card'
 
 const GET_JEWELRY_QUERY = gql`
   query {
-    jewelry {
+    jewelry(first: ${process.env.NEXT_PUBLIC_QUANT_RETURN}) {
       code
       description
       id
