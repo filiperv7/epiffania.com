@@ -1,3 +1,5 @@
+'use client'
+
 import Product from '@/logic/interfaces/Product'
 import formatCurrency from '@/logic/utils/formatCurrency'
 import { Carousel } from '@mantine/carousel'
