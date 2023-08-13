@@ -1,7 +1,11 @@
+'use client'
+
 import { Header } from '@/app/components/Header'
+import { ApolloProvider } from '@apollo/client'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Providers } from './components/Providers'
+
+import { client } from '@/lib/apollo'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,12 +22,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <head></head>
+      <head>
+        <link rel="icon" href="/src/app/favicon.ico" sizes="any" />
+      </head>
       <body className={`${inter.className} h-screen`}>
-        <Providers>
-          <Header />
-          {children}
-        </Providers>
+        <Header />
+        <ApolloProvider client={client}>{children}</ApolloProvider>
       </body>
     </html>
   )

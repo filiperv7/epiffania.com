@@ -24,6 +24,9 @@ const config: Config = {
       },
       boxShadow: {
         epiff: '3px 3px 8px rgba(0, 0, 0, 0.2)'
+      },
+      gridAutoColumns: {
+        fill: 'repeat(auto-fill, minmax(100px, 1fr))'
       }
     }
   },

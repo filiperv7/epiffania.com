@@ -15,8 +15,10 @@ export default function ResponsiveImage({
     <Image
       src={src}
       alt={alt}
+      width={10000}
+      height={10000}
       className={`
-                w-[100%] h-[170px]
+                w-full h-[170px]
                 object-cover
                 ${className ?? ''}
                 `}
