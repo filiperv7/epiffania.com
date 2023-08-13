@@ -57,7 +57,7 @@ export default function Product() {
         <title>{product.name} | Epiffania Joias</title>
       </head>
       <ResponsivePage>
-        <div className="mt-[4.4rem] py-6">
+        <div className="mt-[4.4rem] pt-12 pb-6">
           <Area>
             <div className="max-w-[48rem] min-[481px]:mx-auto">
               <ProductCard

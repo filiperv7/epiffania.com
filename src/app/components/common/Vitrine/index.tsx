@@ -52,7 +52,7 @@ export function Vitrine({
 
   return (
     <Area className={`pb-8 ${className ?? ''}`}>
-      <h2 className="text-center text-4xl font-bold">{title}</h2>
+      <h2 className="text-center text-4xl font-bold pb-6">{title}</h2>
 
       <div className="flex flex-wrap items-center justify-center gap-2">
         {products.map(product => (

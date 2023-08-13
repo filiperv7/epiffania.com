@@ -18,7 +18,7 @@ export function Banner() {
           <h2 className="gradient text-3xl leading-6 drop-shadow-epiff">
             13/08
           </h2>
-          <h1 className="gradient text-7xl max-[317px]:text-6xl max-[317px]:leading-relaxed leading-normal drop-shadow-epiff">
+          <h1 className="gradient text-7xl max-[317px]:text-6xl max-[317px]:leading-relaxed leading-normal drop-shadow-epiff max-[334px]:text-[4rem]">
             Inauguração
           </h1>
         </Area>

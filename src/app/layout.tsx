@@ -23,8 +23,8 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <head>
-        <title>Epiffania Joias</title>
         <link rel="icon" href="/src/app/favicon.ico" sizes="any" />
+        <title>Epiffania Joias</title>
       </head>
       <body className={`${inter.className} h-screen`}>
         <Header />
