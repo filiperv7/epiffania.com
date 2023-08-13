@@ -39,7 +39,6 @@ export function Vitrine({
   // }, [])
 
   const { data } = useQuery<GetJewelryQueryResponse>(GET_JEWELRY_QUERY)
-  console.log(data)
 
   if (!data) {
     return (
