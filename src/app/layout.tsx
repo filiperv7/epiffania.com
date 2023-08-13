@@ -26,7 +26,7 @@ export default function RootLayout({
         <link rel="icon" href="/src/app/favicon.ico" sizes="any" />
         <title>Epiffania Joias</title>
       </head>
-      <body className={`${inter.className} h-screen`}>
+      <body className={`${inter.className} h-screen w-screen`}>
         <Header />
         <ApolloProvider client={client}>{children}</ApolloProvider>
       </body>

@@ -23,7 +23,8 @@ const config: Config = {
         epiff: '5px -2px 3px rgba(0, 0, 0, 0.478)'
       },
       boxShadow: {
-        epiff: '3px 3px 8px rgba(0, 0, 0, 0.2)'
+        epiff: '3px 3px 8px rgba(0, 0, 0, 0.2)',
+        epiffania: '10px 10px 3px rgba(255, 255, 255, 1)'
       },
       gridAutoColumns: {
         fill: 'repeat(auto-fill, minmax(100px, 1fr))'

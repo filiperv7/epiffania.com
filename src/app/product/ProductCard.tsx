@@ -59,7 +59,9 @@ export function ProductCard(product: Product) {
       </div>
 
       <Modal opened={opened} onClose={close} withCloseButton={false} centered>
-        <ModalWhatsApp jewelName="Oii, quero essas joias AGORA!" />
+        <ModalWhatsApp
+          jewelName={`Oii, me interessei muito nessa peça: *${product.name}*`}
+        />
       </Modal>
 
       <Group position="center">

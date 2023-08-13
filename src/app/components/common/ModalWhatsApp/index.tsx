@@ -5,9 +5,9 @@ import { Area } from '../Area'
 
 export function ModalWhatsApp({ jewelName }: { jewelName: string }) {
   return (
-    <Area className="p-4">
-      <h2 className="text-xl font-extrabold text-center pb-8">
-        Escolha com qual representante você prefere:
+    <Area className="py-4">
+      <h2 className="text-2xl font-extrabold text-center pb-8">
+        Escolha com quem você quer falar
       </h2>
 
       <div className="flex items-center gap-6">
@@ -19,13 +19,12 @@ export function ModalWhatsApp({ jewelName }: { jewelName: string }) {
             '%20'
           )}`}
         >
-          {/* %20 */}
           <Image
             src={lays}
             alt=" "
             className="rounded-full bg-gradient-to-tr from-[#daa520] from-30% via-[#f6cb5ef1] via-50% to-[#daa520] to-70% p-[2px]"
           />
-          <p className="text-center pt-2 font-medium">Lays Fernanda</p>
+          <p className="text-lg text-center pt-2 font-medium">Lays Fernanda</p>
         </a>
         <a
           target="_blank"
@@ -40,7 +39,9 @@ export function ModalWhatsApp({ jewelName }: { jewelName: string }) {
             alt=" "
             className="rounded-full bg-gradient-to-tr from-[#daa520] from-30% via-[#f6cb5ef1] via-50% to-[#daa520] to-70% p-[2px]"
           />
-          <p className="text-center pt-2 font-medium">Suellen Marques</p>
+          <p className="text-lg text-center pt-2 font-medium">
+            Suellen Marques
+          </p>
         </a>
       </div>
     </Area>

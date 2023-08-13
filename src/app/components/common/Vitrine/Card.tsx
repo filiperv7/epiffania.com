@@ -32,7 +32,9 @@ export function Card(product: Product) {
         </Link>
 
         <Modal opened={opened} onClose={close} withCloseButton={false} centered>
-          <ModalWhatsApp jewelName="" />
+          <ModalWhatsApp
+            jewelName={`Oii, me interessei muito nessa peça: *${product.name}*`}
+          />
         </Modal>
 
         <Group position="center">
