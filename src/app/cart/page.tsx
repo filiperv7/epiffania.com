@@ -1,10 +1,7 @@
-import { dummyProducts } from '@/logic/utils/dummyProducts'
 import { ResponsivePage } from '../components/common/ResponsivePage'
 
 export default function Cart() {
   // const { products } = useContext(CartContext)
-
-  const products = dummyProducts
 
   return (
     <div>
