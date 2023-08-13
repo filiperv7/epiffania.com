@@ -8,7 +8,7 @@ export default function Home() {
     <ResponsivePage>
       <Banner />
       <Benefits />
-      <Vitrine />
+      <Vitrine title="Destaques" className="pt-10" />
     </ResponsivePage>
   )
 }

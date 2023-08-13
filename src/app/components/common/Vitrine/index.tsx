@@ -1,37 +1,73 @@
+'use client'
+
 import Product from '@/logic/interfaces/Product'
-import { dummyProducts } from '@/logic/utils/dummyProducts'
+import { gql, useQuery } from '@apollo/client'
 import { Area } from '../Area'
 import { Card } from './Card'
 
-export function Vitrine() {
-  // const { addProduct } = useContext(CartContext)
+const GET_JEWELRY_QUERY = gql`
+  query {
+    jewelry {
+      code
+      description
+      id
+      name
+      price
+      slug
+      mainPhoto {
+        url
+      }
+    }
+  }
+`
 
-  const products = dummyProducts
+interface GetJewelryQueryResponse {
+  jewelry: Product[]
+}
 
-  const test = () => {
-    console.log('teste')
+export function Vitrine({
+  title,
+  className
+}: {
+  title: string
+  className?: string
+}) {
+  // const products = useEffect(() => {
+  //   client.query({ query: GET_JEWEL_QUERY }).then(response => {
+  //     return response
+  //   })
+  // }, [])
+
+  const { data } = useQuery<GetJewelryQueryResponse>(GET_JEWELRY_QUERY)
+  console.log(data)
+
+  if (!data) {
+    return (
+      <div className="flex-1">
+        <p>CARREGANDO......</p>
+      </div>
+    )
   }
 
-  const product: Product = {
-    code: 'epff098',
-    title: 'Só um teesteee',
-    oldPrice: 200,
-    price: 300
-  }
+  const products = data.jewelry
 
   return (
-    <Area className="pb-8">
-      <h2 className="text-center text-4xl font-semibold">Destaques</h2>
+    <Area className={`pb-8 ${className ?? ''}`}>
+      <h2 className="text-center text-4xl font-bold">{title}</h2>
 
       <div className="flex flex-wrap items-center justify-center gap-2">
         {products.map(product => (
           <Card
-            key={product.code}
+            key={product.id}
+            id={product.id}
             code={product.code}
-            title={product.title}
+            name={product.name}
+            description={product.description}
             oldPrice={product.oldPrice}
             price={product.price}
-            addProduct={test}
+            slug={product.slug}
+            mainPhoto={product.mainPhoto}
+            photos={product.photos}
           />
         ))}
       </div>

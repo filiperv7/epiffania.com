@@ -19,7 +19,7 @@ export const dummyProducts: Product[] = [
     code: 'epff092',
     title: 'Pulseira Elo Suzzi 8MM Dourado Folheado',
     oldPrice: 59.99,
-    price: 47.72
+    price: 90
   },
   {
     code: 'epff093',
@@ -41,7 +41,7 @@ export const dummyProducts: Product[] = [
   },
 
   {
-    code: 'epff095',
+    code: 'epff097',
     title: 'Pulseira Elo Suzzi 8MM Dourado Folheado',
     oldPrice: 59.99,
     price: 47.72
