@@ -1,8 +1,4 @@
 import { dummyProducts } from '@/logic/utils/dummyProducts'
-import formatCurrency from '@/logic/utils/formatCurrency'
-import bracelete from '@/public/bracelete.webp'
-import Image from 'next/image'
-import { Area } from '../components/common/Area'
 import { ResponsivePage } from '../components/common/ResponsivePage'
 
 export default function Cart() {
@@ -16,7 +12,7 @@ export default function Cart() {
         <title>Carrinho de compras | Epiffania Joias</title>
       </head>
       <ResponsivePage>
-        <div className="mt-[4.4rem] pt-10 pb-24">
+        {/* <div className="mt-[4.4rem] pt-10 pb-24">
           <Area>
             <h1 className="text-4xl font-extrabold text-center">
               Carrinho de compras
@@ -46,7 +42,7 @@ export default function Cart() {
                     </div>
 
                     <div>
-                      <h4 className="text-xl font-semibold">{product.title}</h4>
+                      <h4 className="text-xl font-semibold">{product.name}</h4>
                       <p className="text-xl font-medium">
                         {formatCurrency(product.price)}
                       </p>
@@ -75,7 +71,7 @@ export default function Cart() {
               </button>
             </div>
           </div>
-        </aside>
+        </aside> */}
       </ResponsivePage>
     </div>
   )
